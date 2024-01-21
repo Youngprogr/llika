@@ -18,18 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
       image2.classList.toggle("hidden");
     });
   });
-  document.addEventListener("DOMContentLoaded", function () {
-    const rainContainer = document.querySelector(".rain-container");
-
-    for (let i = 0; i < 100; i++) {
-        const raindrop = document.createElement("div");
-        raindrop.className = "raindrop";
-        raindrop.style.left = `${Math.random() * 100}vw`; // Posición horizontal aleatoria
-        raindrop.style.animationDuration = `${Math.random() * 2 + 1}s`; // Duración de la animación aleatoria
-        rainContainer.appendChild(raindrop);
-    }
-});
-
+ 
 
 //abrir menu//
 let menu=document.querySelector('#menu-icon');
@@ -108,19 +97,21 @@ function openWhatsApp() {
     var whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
     window.open(whatsappUrl, '_blank');
 }
-// Agrega el evento de carga para asegurarte de que el botón y la biblioteca GSAP estén cargados
-// Agrega el evento de carga para asegurarte de que el logo y la biblioteca GSAP estén cargados
-window.addEventListener("load", function() {
-  // Selecciona el logo
-  var logo = document.querySelector('.about-img img'); // Ajusta el selector según tu estructura HTML
 
-  // Define la animación de pulso usando GSAP
-  function pulseAnimation() {
-    gsap.to(logo, { scale: 1.1, duration: 0.5, ease: "power1.inOut", yoyo: true, repeat: -1 });
+
+function showCard() {
+  document.getElementById("card-container").style.display = "flex";
+}
+
+function hideCard() {
+  document.getElementById("card-container").style.display = "none";
+}
+
+// Añadido para cerrar la tarjeta al hacer clic fuera de ella
+// Añadido para cerrar la tarjeta al hacer clic fuera de ella
+document.addEventListener("click", function (event) {
+  const cardContainer = document.getElementById("card-container");
+  if (!event.target.closest(".about") && cardContainer.style.display === "flex") {
+    hideCard();
   }
-
-  // Llama a la función para iniciar la animación
-  pulseAnimation();
 });
-
-

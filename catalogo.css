@@ -239,22 +239,16 @@ header.sticky{
   height: auto;
 
 }
-.about-text h2 {
-  font-family: 'Didot', serif; /* Puedes cambiar 'Georgia' por otra fuente que prefieras */
+.about-text h2{
   font-size: var(--h2-font);
-  color: var(--color--marron);
   line-height: 1.3;
   margin-bottom: 2rem;
-   /* Opcional: Agregar cursiva para más elegancia */
-  font-weight: 400; /* Opcional: Ajustar el grosor de la fuente según tus preferencias */
 }
 .about-text p{
-  color: var(--text-color);
+  color: var(--main-color);
   font-size: var(--p-font);
-  line-height: 35px;
-  margin-bottom: rem;
-  font-weight: bold;
- 
+  line-height: 30px;
+  margin-bottom: 3rem;
 }
 
 /* luvvia */
@@ -265,6 +259,7 @@ header.sticky{
 /* Our shop */
 .middle-text{
   text-align: center;
+  margin-top: 50px;
 
 }
 .middle-text h4{
@@ -592,6 +587,9 @@ header.sticky{
   .help-container{
     width: 200px; /* Puedes ajustar este valor según tus necesidades */
     height: 50px;
+  }
+  .middle-text {
+    margin-top: 50px;
   }
  
 }
